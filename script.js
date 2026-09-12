@@ -102,6 +102,7 @@
   var hudName = document.getElementById('hud-name');
   var tracked = [
     { id: 'philosophy', name: 'Philosophy' },
+    { id: 'expertise', name: 'Expertise' },
     { id: 'method', name: 'Method' },
     { id: 'for', name: 'Who this is for' },
     { id: 'coach', name: 'The coach' },
