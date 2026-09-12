@@ -176,6 +176,20 @@ html.js .is-split .si {
 }
 html.js .in .is-split .si, html.js .is-split.in .si { transform: none; }
 
+/* ---------- line icons: brass, hairline, trace themselves in on reveal ---------- */
+
+.ico {
+  display: block; width: 28px; height: 28px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round;
+  color: var(--brass);
+}
+.ico--small { width: 16px; height: 16px; stroke-width: 1.4; }
+.ico .p {
+  stroke-dasharray: 1; stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.4s var(--ease) 0.25s;
+}
+html.js .reveal:not(.in) .ico .p { stroke-dashoffset: 1; }
+
 /* ---------- buttons and links ---------- */
 
 .btn {
@@ -448,7 +462,9 @@ html.is-loaded .hero__cue { animation: fade-in 1.2s ease 2.6s forwards; }
   transition: transform 0.7s var(--ease);
 }
 .principle:hover::after { transform: scaleX(1); }
+.principle__lead { display: grid; gap: 16px; align-content: start; }
 .principle__title { font-size: 1.55rem; line-height: 1.15; font-variation-settings: var(--display-settings); }
+.principle:hover .ico, .area:hover .ico { color: var(--brass-2); }
 .principle__text { margin: 0; color: var(--bone-70); }
 
 /* expertise */
@@ -465,6 +481,7 @@ html.is-loaded .hero__cue { animation: fade-in 1.2s ease 2.6s forwards; }
   transition: transform 0.7s var(--ease);
 }
 .area:hover::before { transform: scaleX(1); }
+.area .ico { margin-bottom: 18px; }
 .area__title { font-size: 1.5rem; line-height: 1.15; margin-bottom: 12px; }
 .area__text { margin: 0; color: var(--bone-70); font-size: 1rem; }
 
@@ -608,6 +625,7 @@ html.js .coach__figure.in .coach__scan { animation: scan 1.9s var(--ease) 0.5s 1
   transition: color 0.3s var(--ease);
 }
 .direct__k {
+  display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--bone-45);
 }
@@ -713,7 +731,8 @@ html.js .reveal.in {
   .philosophy__grid, .coach__grid, .contact__grid { grid-template-columns: minmax(0, 1fr); }
   .philosophy__copy { position: static; }
   .coach__figure { max-width: 560px; }
-  .principle { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 26px 0; }
+  .principle { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 26px 0; }
+  .principle__lead { grid-template-columns: auto 1fr; align-items: center; }
   .corner--tl, .corner--tr { display: none; }
 }
 

@@ -39,8 +39,9 @@ Forms in the Netlify dashboard.
 
 ## Before launch
 
-- Instagram: replace the `https://www.instagram.com/` link and the `@thelongevitylab` handle in
-  the Contact section with the real profile.
-- "Book a consultation" opens a pre-filled email. Swap in a booking link if one exists.
+- Instagram: the Contact link currently points to https://longevitylabcoach.netlify.app/# as
+  requested, which is the old site rather than an Instagram profile. Replace the `href` with the
+  real profile URL.
+- "Book a consultation" (navigation, mobile menu and Contact) opens the Calendly booking page.
 - Check the Who this is for section reads true to how Saran coaches; it is new copy written from
   the original site's philosophy.
